@@ -69,14 +69,14 @@ buttons.forEach((el) => el.addEventListener('click', (e) => {
             screen.textContent = settings.a;
         } else {
             settings.a += key;
-            screen.textContent = settings.a
+            screen.textContent = settings.a.replace(/^0+/, '')
         }
         
     } else if(settings.a !== '' && settings.b !== '' && settings.finish){
 
         settings.b = key;
         settings.finish = false
-        screen.textContent = settings.b
+        screen.textContent = settings.b.replace(/^0+/, '')
 
 
     } else{
@@ -85,7 +85,7 @@ buttons.forEach((el) => el.addEventListener('click', (e) => {
             screen.textContent =settings.b
         } else {
             settings.b += key;
-            screen.textContent = settings.b
+            screen.textContent = settings.b.replace(/^0+/, '')
         }
     }
     
