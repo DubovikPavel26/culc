@@ -69,14 +69,14 @@ buttons.forEach((el) => el.addEventListener('click', (e) => {
             screen.textContent = settings.a;
         } else {
             settings.a += key;
-            screen.textContent = (+settings.a * 1).toString();
+            screen.textContent = settings.a
         }
         
     } else if(settings.a !== '' && settings.b !== '' && settings.finish){
 
         settings.b = key;
         settings.finish = false
-        screen.textContent = (+settings.b * 1).toString();
+        screen.textContent = settings.b
 
 
     } else{
@@ -85,7 +85,7 @@ buttons.forEach((el) => el.addEventListener('click', (e) => {
             screen.textContent =settings.b
         } else {
             settings.b += key;
-            screen.textContent = (+settings.b * 1).toString();
+            screen.textContent = settings.b
         }
     }
     
